@@ -1,4 +1,5 @@
 ﻿using System;
+using ApresentarPessoa.Entidades;
 
 namespace ApresentarPessoa
 {
@@ -6,9 +7,10 @@ namespace ApresentarPessoa
     {
         static void Main(string[] args)
         {
-             Pessoa apresentar = new Pessoa("Ruan", 33, 1.78);
+             Pessoa pessoa = new Pessoa("Ruan", 33, "Sao Paulo");
 
-             apresentar.Apresentar();
+             // Imprimindo os detalhes da pessoa
+             pessoa.ImprimirDetalhes();
         }
     }
 }

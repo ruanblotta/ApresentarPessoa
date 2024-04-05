@@ -1,22 +1,57 @@
 using System;
 
-namespace ApresentarPessoa
+namespace ApresentarPessoa.Entidades
 {
    public class Pessoa
     {
-        public string Nome{get; set;}
-        public int Idade{get; set;}
-        public double Altura{get; set;}
+        public string Nome;
+        private int _idade;
+        protected string endereco;
 
-        public Pessoa(string nome, int idade, double altura)
+        // construtor padrão s/ parâmetro
+        public Pessoa()
         {
-            Nome = nome;
-            Idade = idade;
-            Altura = altura;
+            Nome = "Sem nome";
+            _idade = 0;
+            endereco = "Endereço não especificado"; 
         }
-        public void Apresentar()
+
+        // Construtor com parâmetro
+        public Pessoa(string nome, int idade, string endereco)
         {
-            Console.WriteLine($"Prazer eu sou o {Nome}, tenho {Idade} anos e tenho {Altura} de altura.");
+            this.Nome = nome;
+            _idade = idade;
+            this.endereco = endereco;
+        }
+
+        // método para acessar e modificar os atributos (encapsulamento)
+
+        public string GetNome()
+        {
+            return Nome;
+        }
+
+        public void SetNome(string nome)
+        {
+            this.Nome = nome;
+        }
+
+        public int GetIdade()
+        {
+            return _idade;
+        }
+
+        public void SetIdade(int idade)
+        {
+            _idade = idade;
+        }
+
+        // método para imprimir os detalhes da pessoa
+        public void ImprimirDetalhes()
+        {
+            Console.WriteLine($"Nome: {Nome}");
+            Console.WriteLine($"Idade: {_idade}");
+            Console.WriteLine($"Endereço: {endereco}");
         }
     }
 }
