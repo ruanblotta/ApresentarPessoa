@@ -1,0 +1,7 @@
+Exercício:
+
+Crie uma classe chamada Pessoa com os seguintes atributos: 
+Nome, Idade e Altura. 
+
+A classe deve ter um método chamado Apresentar(), que imprime na tela uma mensagem 
+com o nome, idade e altura da pessoa.
